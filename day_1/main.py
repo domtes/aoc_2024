@@ -5,8 +5,8 @@ from typing import Generator, TextIO, Tuple
 
 def read_input(f: TextIO) -> Generator[Tuple[int, int], None, None]:
     for line in f:
-       x, y = line.strip().split()
-       yield (int(x), int(y))
+        x, y = line.strip().split()
+        yield (int(x), int(y))
 
 
 def total_distance() -> int:
@@ -23,7 +23,6 @@ def total_distance() -> int:
         total_distance += abs(x - y)
 
     return total_distance
-
 
 
 def similarity_score() -> int:

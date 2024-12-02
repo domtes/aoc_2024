@@ -3,7 +3,7 @@ from typing import List, TextIO
 
 def read_input(f: TextIO) -> List[int]:
     for line in f:
-       yield [int(n) for n in line.strip().split()]
+        yield [int(n) for n in line.strip().split()]
 
 
 def is_safe(report: List[int]) -> bool:
@@ -52,8 +52,8 @@ def count_safe_reports_with_tolerance(f: TextIO) -> int:
         safe = is_safe(report)
 
         if not safe:
-            for n in range(1, len(report)+1):
-                safe = is_safe(report[0:n-1] + report[n:])
+            for n in range(1, len(report) + 1):
+                safe = is_safe(report[0 : n - 1] + report[n:])
                 if safe:
                     break
 
